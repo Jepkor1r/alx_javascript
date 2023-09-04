@@ -1,6 +1,6 @@
-i=0;
-for (i in (len(languages))){
-    let languages=["C is fun", "Python is cool", "JavaScript is amazing"];
+let languages=["C is fun", "Python is cool", "JavaScript is amazing"];
+let i="";
+for (i in languages){
     i += languages
-    console.log(languages);
+    console.log(i);
 }
