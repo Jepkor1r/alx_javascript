@@ -1,4 +1,4 @@
-const Add=x+y;
+let Add=x, y;
 function add(){
     console.log(Add);
 }
