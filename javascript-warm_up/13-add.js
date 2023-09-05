@@ -1,6 +1,4 @@
-let Add=x, y;
-function add(){
-    console.log(Add);
+function add(x, y){
+    return x+y;
 }
-console.log(Add);
-add()
+console.log(add());
