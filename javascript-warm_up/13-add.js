@@ -1,4 +1,5 @@
 function add(x, y){
     return x+y;
 }
-add();
+let result=add(x,y);
+console.log(result);
