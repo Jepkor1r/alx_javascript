@@ -1,2 +1,1 @@
-let myVar = 89;
-exports.myVar=333;
+module.exports=333;
