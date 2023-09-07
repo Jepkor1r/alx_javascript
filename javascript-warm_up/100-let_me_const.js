@@ -1,1 +1,1 @@
-module.exports=333;
+myVar = 333;
