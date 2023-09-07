@@ -1,1 +1,1 @@
-exports.function = function(x, thefunction){for (x*=n of thefunction){}} ;
+exports.function = function(x, thefunction){for (let i = 0; i < x; i++){thefunction(i);}} ;
