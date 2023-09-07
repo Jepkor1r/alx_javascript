@@ -3,10 +3,9 @@ const myObject = {
     value: 12
   };
   console.log(myObject);
-function incr(){
-    for(value>12; value++;){
-        return value += value;
-    }
+
+myObject.incr = function () {
+    this.value++;
 }
 myObject.incr();
 console.log(myObject);
