@@ -1,1 +1,1 @@
-exports.function = function(x, thefunction){for (let i = 0; i < x; i++){thefunction(i);}} ;
+exports.numberOfExecution= function(x, thefunction){for (let i = 0; i < x; i++){thefunction(i);}} ;
