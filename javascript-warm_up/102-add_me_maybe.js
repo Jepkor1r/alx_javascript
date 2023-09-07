@@ -1,1 +1,3 @@
-exports.function = function(x, thefunction){for (x*=n of thefunction){}} ;
+exports.add = function (number, theFunction) {
+    theFunction(++number);
+};
