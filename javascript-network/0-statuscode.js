@@ -2,7 +2,7 @@
 
 const request = require('request');
 
-const url = "https://swapi.dev/api/";
+const url = `${process.argv[2]}`;
 
 request.get(url, {encoding: 'utf-8'})
   .on('response', response=> {
