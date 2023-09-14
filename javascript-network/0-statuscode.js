@@ -5,9 +5,6 @@ const request = require('request');
 const url = `${process.argv[2]}`;
 
 request.get(url, {encoding: 'utf-8'})
-.on('data', data => {
-    console.log(data);
-})
-.on('response', response=> {
-    console.log('code:', response.code);
+ .on('response', response=> {
+    console.log('code:', response.statusCode);
   })
