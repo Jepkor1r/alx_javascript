@@ -1,28 +1,29 @@
 #!/usr/bin/node
 
 const request = require('request');
-url = process.argv[2];
 
-request(url, function (error, respose, body) {
-  number_of_tasks = JSON.parse(body);
-  completeTasks = {};
+const url = process.argv[2];
 
-  for (let i = 0; i < number_of_tasks.length; i++) {
-    id = number_of_tasks[i].id;
-    if (number_of_tasks[i].completed) {
-      if (completeTasks.hasOwnProperty(id)) {
-        completeTasks[id] += 1;
+request.get(url, { encoding: 'UTF-8' }, (error, response, body) => {
+  if (error) {
+    console.error('Error:', error);
+    return;
+  }
+
+  const tasks = JSON.parse(body);
+  const completeTasks = {};
+
+  tasks.forEach((tasks) => {
+    if (tasks.completed) {
+      if (completeTasks[tasks.userId]) {
+        completeTasks[tasks.userId]++;
       } else {
-        completeTasks[id] = 1;
+        completeTasks[tasks.userId] = 1;
       }
     }
-  }
+  });
 
-
-  for (let key in completeTasks) {
-    if (completeTasks[key] == 0) {
-      delete completeTasks[key];
-    }
-  }
-  console.log(completeTasks);
+  const jsonResult = JSON.stringify(completeTasks, null, 2);
+  const formattedJsonResult = jsonResult.replace(/"/g, "'");
+  console.log(formattedJsonResult);
 });
