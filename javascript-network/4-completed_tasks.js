@@ -23,7 +23,5 @@ request.get(url, { encoding: 'UTF-8' }, (error, response, body) => {
     }
   });
 
-  const jsonResult = JSON.stringify(completeTasks, null, 2);
-  const formattedJsonResult = jsonResult.replace(/"/g, "'");
-  console.log(formattedJsonResult);
+  console.log(completeTasks);
 });
