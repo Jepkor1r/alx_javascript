@@ -21,7 +21,7 @@ request(url, function (error, respose, body) {
 
   for (let key in completeTasks) {
     if (completeTasks.key == 0) {
-      delete completeTasks.key;
+      delete completeTasks[key];
     }
   }
   console.log(completeTasks);
